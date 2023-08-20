@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/profile.css">
+    <title>DOCTORS</title>
+</head>
+<body>
+  <header>
+      <%- include('navbar') %>
+  </header>
+    <div class="doctor-container">
+      <% doctors.forEach(doctor => { %>
+        <div class="doctor-details">
+          <img src="<%=doctor.image %>" alt="Doctor's Image">
+          <br/>
+          <br/>
+          <h2><%=doctor.name %></h2>
+          <br/> 
+          <h4 class="livestatus <%= doctor.livestatus ? 'live' : 'not-live' %>"><%= doctor.livestatustext %></h4>
+          <br/> 
+          <h4> <%= doctor.degree %> -  <%= doctor.speciality %> </h4>
+          <br/> 
+          <h4 class="gender">Gender : <%= doctor.gender %></h4>
+          <br/>
+          <% if (doctor.livestatus) { %>
+            <div class="btn">
+              <i class='bx bxs-phone-call'></i>
+              <button>CALL</button>
+            </div>
+          <% } else{ %>
+            <div class="reqbtn">
+            <i class='bx bxl-gmail'></i>
+            <!-- <button> <a href='/send?email=<%=doctor.email%>'>REQUEST</a></button> -->
+            <button class="requestButton" data-email="<%=doctor.email%>">REQUEST</button>
+          </div>
+         <% } %>
+        </div>
+      <% }) %>
+    </div>
+</body>
+   
+
+<script>
+
+  document.addEventListener("DOMContentLoaded", () => {
+
+  const requestButtons = document.querySelectorAll(".requestButton");
+
+  requestButtons.forEach((requestButton) => {
+    requestButton.addEventListener("click", () => {
+    
+      const doctoremail = requestButton.getAttribute("data-email");
+      console.log(doctoremail);
+
+      window.location.href = '/emailconfirm';
+      
+      fetch("/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type":"application/json",
+        },
+        body: JSON.stringify({doctoremail}),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data); 
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    });
+  });
+});
+</script>
+</html>

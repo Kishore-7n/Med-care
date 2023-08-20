@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Edu+NSW+ACT+Foundation:wght@600;700&family=Merriweather:ital,wght@1,300;1,700&family=Poppins:ital,wght@0,400;0,600;0,700;1,700&family=Roboto&family=Tillana:wght@500&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    list-style:none;
+    text-decoration:none;
+}
+body{
+    min-height:100vh;
+    width:100%;
+    height:100%;
+}
+
+.main{
+    height:100vh;
+    width:100%;
+    display:flex;
+    padding:30px;
+}
+
+.homeimg{
+    width:60%;
+    height:100%;
+}
+.homeimg img{
+    width:100%;
+    height:100%;
+}
+.abt{
+    width:40%;
+    height:100%;
+    padding-top:200px;
+}
+
+.abt h1{
+    font-weight:800;
+    font-size:50px;
+    font-family:"Roboto";
+}
+.abt h5{
+    font-weight:600;
+    font-size:25px;
+    font-family:"Roboto";
+}
+.btn{
+    padding-right:50px;
+    padding-top:200px;
+}
+.btn button{
+    border-radius:15px;
+    background-color: blue;
+    border:1px solid blue;
+    color: white;
+    width:150px;
+    height:30px;
+}
+
+.foot{
+    background-color:black;
+    min-width:100vh;
+    width:100%;
+    display:flex;
+    padding:30px;
+
+}
+footer{
+    display: flex;
+}
+
+.foot div{
+    color: white;
+    padding:30px;
+}
+.foot ul{
+    color: white;
+    padding-bottom:30px;
+}
+.foot h1{
+    color: white;
+    padding-bottom:30px;
+}
+
+.social h1{
+    padding-left:20px;
+}
+
+.social a{
+    padding-left:20px;
+}
+
+
+
+

@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="/css/navbar.css">
+<header class="header">
+    <div class="topnav" id="myTopnav">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/book">Book</a>
+        <a href="/doctor">Doctors</a>
+        <!-- <a href="#Contact">Contact</a> -->
+        <% if (loggedin) { %>
+            <a href="/">Welcome <%= login_user.name %></a>
+            <button onclick="logout()">Logout</button>
+          <% } else { %>
+            <button onclick="signup()">Signup</button>
+            <button onclick="login()">Login</button>
+          <% } %>
+    </div>
+    <script>
+        function logout()
+        {
+            window.location.href = '/logout'
+        }
+        const signup = () => {
+            window.location.href = '/signup'
+        }
+
+        const login = () => {
+            window.location.href = '/login'
+        }
+    </script>
+</header>

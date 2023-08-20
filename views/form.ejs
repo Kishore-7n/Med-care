@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="/css/form.css" rel="stylesheet" type="text/css">
+    <title>SLOT-BOOKING</title>
+</head>
+<body>
+    <header>
+        <%- include('navbar') %>
+    </header>
+    <form class="form" action="/book" method="post">
+        <div class="form-vector">
+        </div>
+        <div class="form-container">
+        <!-- <div class="form-title">
+            <h4>BOOK YOUR SLOTS</h4>
+        </div> -->
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">NAME</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Name" required autocomplete="off" autosave="off" name="Name">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">AGE</label>
+            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Age" required autocomplete="off" autosave="off" name="Age">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">MOBILE NUMBER</label>
+            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Mobile Number" required autocomplete="off" autosave="off" name="MobileNumber">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">SELECT THE DOCTOR</label>
+            <select class="form-select" aria-label="Default select example" autocomplete="off" autosave="off" required name="DoctorName">
+                <option selected>Open this select menu</option>
+                <% doctors.forEach(doctor => { %>
+                <option value="<%= doctor.name %>"><%= doctor.name %></option>
+                <% })%>
+              </select> 
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">SELECT YOUR SLOT</label>
+            <select class="form-select" aria-label="Default select example" autocomplete="off" autosave="off" required name="Slot">
+                <option selected>Open this select menu</option>
+                <option value="10.00 AM - 12.00 PM">10.00 AM - 12.00 PM</option>
+                <option value="1.00 PM - 4.00 PM">1.00 PM - 4.00 PM</option>
+                <option value="6.00 PM - 7.30 PM">6.00 PM - 7.30 PM</option>
+                <option value="8.30 PM - 9.30 PM">8.00 PM - 9.30 PM</option>
+              </select> 
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">SELECT A DATE</label>
+            <input type="date" class="form-control" id="exampleFormControlInput1"required autocomplete="off" autosave="off" name="DateofAppointment">
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">BOOK YOUR SLOTS</button>
+        </div>
+    </div>
+    </form>
+</body>
+<script src="main.js"></script>
+</html>

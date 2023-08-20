@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Edu+NSW+ACT+Foundation:wght@600;700&family=Merriweather:ital,wght@1,300;1,700&family=Poppins:ital,wght@0,400;0,600;0,700;1,700&family=Roboto&family=Tillana:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Edu+NSW+ACT+Foundation:wght@600;700&family=Merriweather:ital,wght@1,300;1,700&family=Poppins:ital,wght@0,400;0,600;0,700;1,700&family=Roboto&family=Tillana:wght@500&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    width:100%;
+    height:100vh;
+    display:flex;
+    padding-top:80px;
+    align-items:center;
+    justify-content:center;
+   
+}
+
+.signup-form{
+    width:90%;
+    height:650px;
+    padding:100px;
+    background-image:url(/images/signup.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    border-radius:9px;
+    font-family:"Roboto";
+}
+
+.signup-form-container{
+    width:300px;
+}
+
+.signup-form-container button{
+    width:300px;
+    height:35px;
+    border:1px solid blueviolet;
+    background-color:blueviolet;
+    border-radius:19px;
+    color:white;
+    font-weight:500;
+}
+
+.signup-form-container h2{
+    font-family:'Roboto';
+    font-size:60px;
+    font-weight:600;
+    color:black;
+}
