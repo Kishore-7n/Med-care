@@ -66,6 +66,10 @@ giving you peace of mind as you make informed decisions about your health.
 
   ![Screenshot (104)](https://github.com/Kishore-7n/Med-care/assets/115572239/4ad41770-0497-4a14-987f-460e705fae9c)
 
+  confirmation email sample
+
+  ![Screenshot 2023-08-20 144011](https://github.com/Kishore-7n/Med-care/assets/115572239/87112f53-8e7b-4398-bf20-8ae978f18595)
+
 
 
 
